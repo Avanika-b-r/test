@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=yes, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="testStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+
+<body>
+
+  <div ng-show="readmode">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <div id="container">
+
+    <div class="mySlides fade">
+      <div class="col-1 col-md-1"></div>
+      <div id="width" class="col-5 col-md-10" style="float: left; align-content: center;">
+        <img id="img13" src="pic1.jpg" style="vertical-align: middle;">
+      </div>
+
+
+      <div class="col-5 col-md">
+        <p style="font-size: 25px; text-align: center;"><strong>Another longer title with pic</strong></p>
+        <br>   
+        <p style="text-align: justify; margin-top: -20px; font-size: 20px;">
+          Dies Ist ein Blind... An ihm klast sVh vieles Ober die Schrift ablesen, in der er ges sets. las Auf den eraten BlIck wird der Grauwert der Schrigniche sichtbas Dann keno rnan prefen. wie gut die Schrift zu lesen und wie sie aufden Leser wirkt. Dies ist ein Blind... An lesst sich vides fiber die Schrift able.. in der er setzt iss Auf den ersten Back wird der Granwert der Schrinfliche sichtbas Dann kann man pitifen, wle gut die Schrift zu ksenistundwie sie auf den Leser wirkt. The white-naped xenopsaris is a bird in the family  Tityridae
+        </p>
+        <p style="text-align: justify; font-size: 20px;">
+          Dies Ist ein Blind... An ihm klast sVh vieles Ober die Schrift ablesen, in der er ges sets. las Auf den eraten BlIck wird der Grauwert der Schrigniche sichtbas Dann keno rnan prefen. wie gut die Schrift zu lesen und wie sie aufden Leser wirkt. Dies ist ein Blind... An lesst sich vides fiber die Schrift able.. in der er setzt iss Auf den ersten Back wird der Granwert der Schrinfliche sichtbas Dann kann man pitifen, wle gut die Schrift zu ksenistundwie sie auf den Leser wirkt. The white-naped xenopsaris is a bird in the family  Tityridae
+        </p>
+      </div>
+      <div class="col-1"></div>
+    </div>  
+
+    <div class="mySlides fade" style="margin-top: 5%;">
+      <div class="col-3"></div>
+      <div class="col-6 col-md">
+        <p style="font-size: 30px; text-align: center;"><strong>Editorial</strong></p> 
+        <p style="font-size: 22px; text-align: justify; line-height: 30px;">Dies Ist ein Blind... An ihm klast sVh vieles Ober die Schrift ablesen, in der er ges sets. las Auf den eraten BlIck wird der Grauwert der Schrigniche sichtbas Dann keno rnan prefen. wie gut die Schrift zu lesen und wie sie aufden Leser wirkt. Dies ist ein Blind... An lesst sich vides fiber die Schrift able.. in der er setzt iss Auf den ersten Back wird der Granwert der Schrinfliche sichtbas Dann kann man pitifen, wle gut die Schrift zu ksenistundwie sie auf den Leser wirkt.</p> 
+      </div>  
+      <div class="col-3"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="col-1 col-md-1"></div>
+      <div class="col-5 col-md-10" style="float: left;">
+        <img id="img23" src="pic2.jpg" style="margin-top: 15%;">         
+      </div>
+
+
+      <div class="col-5 col-md" style="margin-top: 5%">
+        <p style="font-size: 30px; text-align: center;"><strong>Title related to picture</strong></p>
+        <p style="text-align: justify; font-size: 20px;">Dies Ist ein Blind... An ihm klast sVh vieles Ober die Schrift ablesen, in der er ges sets. las Auf den eraten BlIck wird der Grauwert der Schrigniche sichtbas Dann keno rnan prefen. wie gut die Schrift zu lesen und wie sie aufden Leser wirkt. Dies ist ein Blind... An lesst sich vides fiber die Schrift able.. in der er setzt iss Auf den ersten Back wird der Granwert der Schrinfliche sichtbas Dann kann man pitifen, wle gut die Schrift zu ksenistundwie sie auf den Leser wirkt. The white-naped xenopsaris (Xenopsaris albinucha) is a bird in the family Tityridae found in the South American countries of Venezuela, Braz</p>
+      </div> 
+      <div class="col-1"></div> 
+    </div>
+    </div>
+
+    <div class="col-12" style="text-align:center;">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    
+  </div>
+
+
+
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1} 
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block"; 
+      dots[slideIndex-1].className += " active";
+    }
+
+  </script>
+
+</body>
+</html>
